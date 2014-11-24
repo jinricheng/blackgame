@@ -2,7 +2,7 @@
 package blackjack.game;
 
 import javax.swing.JOptionPane;
-
+import java.util.*;
 /**
  *
  * @author Edark
@@ -19,12 +19,14 @@ public class BlackjackGame {
         boolean primera = true;
         boolean bancarrota[];
 // Presentacion
+        Locale loc = new Locale("ca","CA");
+        ResourceBundle resb1 = ResourceBundle.getBundle("blackjack",loc); 
+       
+        JOptionPane.showMessageDialog(null, resb1.getString("greeting message"));
 
-        JOptionPane.showMessageDialog(null, "Bienvenido al juego de Blackjack.");
 
 
-
-        JOptionPane.showMessageDialog(null, "                AUTOR: \n               EDARK");
+       // JOptionPane.showMessageDialog(null, "                AUTOR: \n               EDARK");
 
 
 // Preguntamos por número de jugadores y por la cantidad con la que
